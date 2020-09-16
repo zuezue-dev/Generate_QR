@@ -3,8 +3,8 @@
 <head>
     <title>QR code Generator</title>
 
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link rel="stylesheet" href="{{asset('css/qr.css')}}">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/qr.css">
 </head>
 <body style="background-color:  #E0FFFF; margin-top:2rem">
     <div class="layout">

@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link href="{{ asset('css/menu.css') }}" rel="stylesheet">
+        <link href="/css/menu.css" rel="stylesheet">
     </head>
     <body>
         <div class="wrapper">
