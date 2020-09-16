@@ -15,16 +15,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
-Route::get('shop_one_qr', function () {
-    \QrCode::size(500)
-            ->format('png')
-            ->generate('http://localhost:8000/shop_one_menu', public_path('images/qrcode.png'));
-return view('qrCode');
+Route::get('generate_qr_code', function () {
+    return view('home');
 });
 
-Route::get('shop_one_menu', function() {
+Route::post('generate_qr_code', 'QRGeneratorController@generateQr')->name('generate.qr');
+
+Route::get('/download/png', 'DownloadController@getPngDownload')->name('download.png');
+Route::get('/download/svg', 'DownloadController@getSvgDownload')->name('download.svg');
+
+Route::get('/shop_one_menu', function() {
     return view('shopOneMenu');
 });
